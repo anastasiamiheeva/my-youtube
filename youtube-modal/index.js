@@ -43,7 +43,7 @@
 		const rafAnimation = function () {
 
 			allAnimation.forEach((item) => {
-				console.log(item.from, item.step)
+				
 				if (item.reverse) {
 					item.from -= item.step
 				} else {
@@ -54,7 +54,7 @@
 			})
 
 			counter++;
-			console.log(allAnimation)
+			
 			if (counter < count) {
 
 				requestAnimationFrame(rafAnimation);
@@ -155,10 +155,10 @@ function init() {
 
 
 	const openYoutubeModal = e => {
-			e.preventDefault();
+			
 			const target = e.target.closest('.youtube-modal');
 			if (!target) return;
-
+			e.preventDefault();
 			const href = target.href;
 			const search = href.includes('youtube');
 			let idVideo = search ? href.match(/(\?|&)v=([^&]+)/)[2] : href.match(/(\.be\/)([^&]+)/)[2];
